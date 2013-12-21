@@ -9,9 +9,9 @@ let assembly = Assembly.GetExecutingAssembly()
 let definitions = StepDefinitions(assembly)
 
 let executeFeature featureFile = 
-    let stream = assembly.GetManifestResourceStream(featureFile)
+    let stream = assembly.GetManifestResourceStream featureFile
     match stream with
-    | null -> raise (FileNotFoundException(featureFile))
+    | null -> raise <| FileNotFoundException featureFile
     | _ -> definitions.Execute(featureFile, stream)
 
 let featureFiles = 

@@ -56,8 +56,9 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <EmbeddedResource Include="mutantCamelFeature.txt" />
-    <Compile Include="mutantCamelFeature.fs" />
+    <EmbeddedResource Include="attackOfMutantCamels.feature" />
+    <EmbeddedResource Include="revengeOfMutantCamels.feature" />
+    <Compile Include="googleSearchSteps.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <None Include="packages.config" />
